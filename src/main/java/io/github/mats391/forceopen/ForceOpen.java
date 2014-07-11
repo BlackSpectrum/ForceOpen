@@ -1,4 +1,4 @@
-package it.github.mats391.forceopen;
+package io.github.mats391.forceopen;
 
 import org.bukkit.Material;
 import org.bukkit.block.Block;
