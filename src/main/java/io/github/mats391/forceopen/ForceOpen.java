@@ -21,7 +21,7 @@ public class ForceOpen extends JavaPlugin implements Listener
 		pm.registerEvents( this, this );
 	}
 
-	@EventHandler(priority = EventPriority.NORMAL)
+	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onPlayerInteract( final PlayerInteractEvent event ) {
 		if ( event.isCancelled() )
 			return;
@@ -33,6 +33,7 @@ public class ForceOpen extends JavaPlugin implements Listener
 
 			if ( block.getType().equals( Material.CHEST ) )
 			{
+				event.setCancelled( true );
 				final Chest chest = (Chest) block.getState();
 				player.openInventory( chest.getInventory() );
 
